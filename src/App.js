@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import main from "./layOut/page/main";
 import profile from "./layOut/page/profile";
@@ -12,11 +12,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <SideBar></SideBar>
-        <Switch>
-          <Route path= "/" exact component = { main }></Route>
-          <Route path= "/" component = { profile }></Route>
-          <Route path= "/" component = { like }></Route>
-        </Switch>
+        <Routes>
+          <Route path= "/" exact element = { main }></Route>
+          <Route path= "/profile" element = { profile }></Route>
+          <Route path= "/like" element = { like }></Route>
+        </Routes>
       </BrowserRouter>
     </div>  // App
   );
@@ -33,7 +33,7 @@ function App() {
 //       <label htmlFor = "poly">polygon : </label>
 //       <input id = "poly" placeholder = "polygon"
 //       value = { poly } onChange={onChange}></input>
-//       <h4>â•°(*Â°â–½Â°*)â•¯ polygon convert to...</h4>
+//       <h4>?•°(*Â°?–½Â°*)?•¯ polygon convert to...</h4>
 //       <label htmlFor = "dollor">$ dollor : </label>
 //       <input id = "dollar" value = {dollor}></input>
 //     </div>

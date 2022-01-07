@@ -1,52 +1,66 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import * as BsIcons from "react-icons/bs";
 
-import profile from "../../../img/profile.jpg";
+// import profile from "./profile.jpg";
 
-const Container = styled.div`
-    position: fixed;
-    left: 0px;  height: 100%;   width: 240px;
-    background-color:lightblue;
+const NavBar = styled.div`
+    background-color: yellow;
+    height: 80px;   width: 100%;
+    display: flex;
+    justify-items: center;  align-times: center;
 `
+
 const Menu = styled.div`
     width: 150px;
     display: flex;
     margin-top: 40px;
     flex-direction: colums;
-`
+`;
+
 const Profile = styled.img`
   width: 70px;
   height: 70px;
   border-radius: 100%;
-`
+`;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0px;  height: 100vh;   width: 240px;
+    background-color:lightblue;
+`;
 
 function SideBar(){
-    const items = [
-        { label: "Home", path: "../page/main"}, { label: "profile", path: "../page/profile" }, 
-        { label: "like", path: "../page/like" }
-        //, { label : "message", path: "../page/message" }, 
-        // { label : "option", path: "../page/option" }
+    const SideBarItem = [
+        { title: "Home", path: "../page/main",
+        icon: <BsIcons.BsFillHouseDoorFill/> },
+        { title: "profile", path: "../page/profile",
+        icon: <BsIcons.BsPersonBoundingBox/> }, 
+        { title: "like", path: "../page/like" },
+        // { title : "message", path: "../page/message" }, 
+        // { title : "option", path: "../page/option" }
     ];
-    return(<Container>
-        <Profile src = { profile }> 초더잴ㄷ</Profile>
+    return(
+    <Container>
+        {/* <Profile src = { profile }> chocoTheJailed</Profile> */}
         <Menu>
-            {items.map((menu, index) => {
+            {SideBarItem.map((item, index) => {
                 return(
-                    <Link to = {menu.path} key = {index}>
-                        <SideBarItem menu = { menu }>
+                <li key={index}>
+                    <Link to = {item.path}>
+                        { item.icon }
+                        <span>{ item.title }</span>
+                        <SideBarItem item = { item }>
                         </SideBarItem>
-                    </Link>);
+                    </Link>
+                </li>);
             })}
         </Menu>
     </Container>);
-}
-
-function SideBarItem({ menu }){
-    return(
-        <div className = "sideBarItem">
-            <p>{ menu.name }</p>
-        </div>);
 }
 
 export default SideBar;
