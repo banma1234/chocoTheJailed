@@ -27,7 +27,7 @@ const Container = styled.div`
     left: 0px;  height: 100vh;   width: 250px;
     background-color:lightblue;
 `;
-
+// fuck
 function SideBar(){
     const menu = [
         { title: "Main", path: "/" },
