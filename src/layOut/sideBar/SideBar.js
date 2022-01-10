@@ -1,27 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import * as BsIcons from "react-icons/bs";
+import { NavLink } from "react-router-dom";
+// import * as BsIcons from "react-icons/bs";
 
-// import profile from "./profile.jpg";
-
-const NavBar = styled.div`
-    background-color: yellow;
-    height: 80px;   width: 100%;
-    display: flex;
-    justify-items: center;  align-times: center;
-`
+import myProfile from "./profile.jpg";
 
 const Menu = styled.div`
     width: 150px;
     display: flex;
-    margin-top: 40px;
-    flex-direction: colums;
+    margin-top: 30px;
+    flex-direction: column;
+    font-size: 25px;
 `;
 
 const Profile = styled.img`
-  width: 70px;
-  height: 70px;
+  width: 150px;
+  height: 150px;
   border-radius: 100%;
 `;
 
@@ -30,37 +24,41 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    left: 0px;  height: 100vh;   width: 240px;
+    left: 0px;  height: 100vh;   width: 250px;
     background-color:lightblue;
 `;
 
 function SideBar(){
-    const SideBarItem = [
-        { title: "Home", path: "../page/main",
-        icon: <BsIcons.BsFillHouseDoorFill/> },
-        { title: "profile", path: "../page/profile",
-        icon: <BsIcons.BsPersonBoundingBox/> }, 
-        { title: "like", path: "../page/like" },
+    const menu = [
+        { title: "Main", path: "/" },
+        { title: "Profile", path: "/Profile"}, 
+        { title: "Like", path: "/Like" },
         // { title : "message", path: "../page/message" }, 
         // { title : "option", path: "../page/option" }
     ];
     return(
     <Container>
-        {/* <Profile src = { profile }> chocoTheJailed</Profile> */}
+        <Profile src={ myProfile }></Profile>
         <Menu>
-            {SideBarItem.map((item, index) => {
+            {menu.map((menu, index) => {
                 return(
-                <li key={index}>
-                    <Link to = {item.path}>
-                        { item.icon }
-                        <span>{ item.title }</span>
-                        <SideBarItem item = { item }>
-                        </SideBarItem>
-                    </Link>
-                </li>);
+                    <NavLink exact style = { {color: "gray", textDecoration: "none"} }
+                    to = { menu.path } key = { index } 
+                    activeStyle = { {color: "white"} }>
+                        <SideBarItem menu = { menu }/>
+                    </NavLink>
+                );
             })}
         </Menu>
     </Container>);
+}
+
+function SideBarItem({ menu }){
+    return(
+        <div className = "sideBar-item">
+            <p>{ menu.title }</p>
+        </div>
+        );
 }
 
 export default SideBar;

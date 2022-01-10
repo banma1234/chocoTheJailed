@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function profile(){
+function Profile(){
     return(
         <div>
             <h1>Profile이다 이자슥아</h1>
         </div>)
 }
 
-export default profile;
+export default Profile;

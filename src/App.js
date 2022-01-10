@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import main from "./layOut/page/main";
-import profile from "./layOut/page/profile";
-import like from "./layOut/page/like";
-import SideBar from "./layOut/sideBar/SideBar";
+// import Main from "./layOut/SideBar/Main";
+// import Profile from "./layOut/SideBar/Profile";
+// import Like from "./layOut/SideBar/Like";
+import SideBar from "./layOut/SideBar/SideBar";
+import { Main, Profile, Like } from "./pages";
 import './App.css';
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
       <BrowserRouter>
         <SideBar></SideBar>
         <Routes>
-          <Route path= "/" exact element = { main }></Route>
-          <Route path= "/profile" element = { profile }></Route>
-          <Route path= "/like" element = { like }></Route>
+          <Route exact path= "/" element = { Main }></Route>
+          <Route path= "/Profile" element = { Profile }></Route>
+          <Route path= "/Like" element = { Like }></Route>
         </Routes>
       </BrowserRouter>
     </div>  // App
@@ -33,7 +34,7 @@ function App() {
 //       <label htmlFor = "poly">polygon : </label>
 //       <input id = "poly" placeholder = "polygon"
 //       value = { poly } onChange={onChange}></input>
-//       <h4>?•°(*Â°?–½Â°*)?•¯ polygon convert to...</h4>
+//       <h4>?ï¿½ï¿½(*Â°?ï¿½ï¿½Â°*)?ï¿½ï¿½ polygon convert to...</h4>
 //       <label htmlFor = "dollor">$ dollor : </label>
 //       <input id = "dollar" value = {dollor}></input>
 //     </div>
