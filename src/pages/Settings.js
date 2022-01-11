@@ -7,10 +7,10 @@ const Section = styled.div`
   font-size: 50px;
 `;
 
-function Like(){
+function Settings(){
     return(
-        <Section>Like</Section>
-        )
+        <Section>Settings</Section>
+    )
 }
 
-export default Like;
+export default Settings;

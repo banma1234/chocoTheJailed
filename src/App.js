@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Profile from "./layOut/SideBar/Profile";
 // import Like from "./layOut/SideBar/Like";
 import SideBar from "./layOut/SideBar/SideBar";
-import { Main, Profile, Like } from "./pages";
+import { Main, Profile, Like, Settings, NotFound } from "./pages";
 import './App.css';
 
 function App() {
@@ -14,9 +14,11 @@ function App() {
       <BrowserRouter>
         <SideBar></SideBar>
         <Routes>
-          <Route exact path= "/" element = { Main }></Route>
-          <Route path= "/Profile" element = { Profile }></Route>
-          <Route path= "/Like" element = { Like }></Route>
+          <Route path = "/" element = { <Main/> }></Route>
+          <Route path = "/pages/Profile" element = { <Profile/> }></Route>
+          <Route path = "/pages/Like" element = { <Like/> }></Route>
+          <Route path = "/pages/Settings" element = { <Settings/> }></Route>
+          <Route path = "/*" element = { <NotFound/> }></Route>
         </Routes>
       </BrowserRouter>
     </div>  // App

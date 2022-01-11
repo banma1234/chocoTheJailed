@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-// import * as BsIcons from "react-icons/bs";
+import { IoMdHome, IoMdPerson, IoMdHeart, IoMdSettings } from "react-icons/io";
 
 import myProfile from "./profile.jpg";
 
 const Menu = styled.div`
-    width: 150px;
+    width: 170px;
     display: flex;
     margin-top: 30px;
     flex-direction: column;
@@ -17,9 +17,11 @@ const Profile = styled.img`
   width: 150px;
   height: 150px;
   border-radius: 100%;
+  margin-top : -300px;
 `;
 
 const Container = styled.div`
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,38 +29,59 @@ const Container = styled.div`
     left: 0px;  height: 100vh;   width: 250px;
     background-color:lightblue;
 `;
+
+// const ToggleBtn = styled.button`
+//     position: sticky;
+//     width: 30px; height: 100px;
+//     border: none;
+//     background-color: skyblue;
+// `
+
 // fuck
 function SideBar(){
     const menu = [
         { title: "Main", path: "/" },
-        { title: "Profile", path: "/Profile"}, 
-        { title: "Like", path: "/Like" },
-        // { title : "message", path: "../page/message" }, 
-        // { title : "option", path: "../page/option" }
+        { title: "Profile", path: "../pages/Profile"}, 
+        { title: "Like", path: "../pages/Like" },
+        // { title : "message", path: "../pages/message" }, 
+        { title : "Settings", path: "../pages/Settings" }
     ];
     return(
-    <Container>
-        <Profile src={ myProfile }></Profile>
+        <>
+        <Container>
+        <Profile src={ myProfile }/>
+        <p>choco the Jailed</p>
         <Menu>
             {menu.map((menu, index) => {
                 return(
-                    <NavLink exact style = { {color: "gray", textDecoration: "none"} }
-                    to = { menu.path } key = { index } 
+                    <NavLink to = { menu.path } key = { index } 
+                    exact style = { {color: "gray", textDecoration: "none"} }
                     activeStyle = { {color: "white"} }>
                         <SideBarItem menu = { menu }/>
                     </NavLink>
                 );
             })}
         </Menu>
-    </Container>);
+        </Container>
+        {/* <ToggleBtn/> */}
+        </> // head div
+    );
 }
 
 function SideBarItem({ menu }){
+    var currentMenu = menu.title;
     return(
-        <div className = "sideBar-item">
-            <p>{ menu.title }</p>
+        <div>
+            {
+                {
+                    Main : <p><IoMdHome/> { menu.title }</p>,
+                    Profile : <p><IoMdPerson/> { menu.title }</p>,
+                    Like : <p><IoMdHeart/> { menu.title }</p>,
+                    Settings : <p><IoMdSettings/> { menu.title }</p>
+                }[currentMenu]
+            }
         </div>
-        );
+    )
 }
 
 export default SideBar;

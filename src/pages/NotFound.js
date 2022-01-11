@@ -7,10 +7,10 @@ const Section = styled.div`
   font-size: 50px;
 `;
 
-function Like(){
+function NotFound(){
     return(
-        <Section>Like</Section>
+        <Section>404 NotFound</Section>
         )
 }
 
-export default Like;
+export default NotFound;

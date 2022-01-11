@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Slide = styled.div`
-  width: 700px;
-  height: 700px;
+const Section = styled.div`
+  position: absolute;
+  width: 100%; height: 100vh;    left: 250px;
   font-size: 50px;
-  background-color: yellow;
 `;
 
 function Main(){
     return(
-        <Slide>Main이다 이새끼야</Slide>
+        <Section>Main</Section>
     )
 }
 
