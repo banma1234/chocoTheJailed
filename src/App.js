@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import SideBar from "./layOut/SideBar/SideBar";
-import SnsBar from "./layOut/snsBar/snsBar";
+import SnsBar from "./layOut/snsBar";
 import { Main, Profile, Like, Settings, NotFound } from "./pages";
 import './App.css';
 
