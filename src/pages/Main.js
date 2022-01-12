@@ -17,7 +17,7 @@ const MainSection = styled.div`
 
 const swiperStyle = {
   position: "relative",
-  width: "1000px",  height: "1000px"
+  width: "1000px",  height: "700px"
 };
 
 const SlideImg = [

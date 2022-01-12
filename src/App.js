@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// import Main from "./layOut/SideBar/Main";
-// import Profile from "./layOut/SideBar/Profile";
-// import Like from "./layOut/SideBar/Like";
 import SideBar from "./layOut/SideBar/SideBar";
+import SnsBar from "./layOut/snsBar/snsBar";
 import { Main, Profile, Like, Settings, NotFound } from "./pages";
 import './App.css';
 
@@ -21,6 +19,7 @@ function App() {
           <Route path = "/*" element = { <NotFound/> }></Route>
         </Routes>
       </BrowserRouter>
+      <SnsBar/>
     </div>  // App
   );
 }
