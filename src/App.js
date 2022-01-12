@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Main from "./layOut/SideBar/Main";
 // import Profile from "./layOut/SideBar/Profile";
 // import Like from "./layOut/SideBar/Like";
-import SideBar from "./layOut/SideBar/SideBar";
+import SideBar from "./layOut/sideBar/SideBar";
 import { Main, Profile, Like, Settings, NotFound } from "./pages";
 import './App.css';
 
