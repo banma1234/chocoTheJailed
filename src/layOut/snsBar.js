@@ -13,7 +13,7 @@ export function SnsBar() {
   return (
     <div className="snsBar-container">
       {sns.img.map((i) => 
-        <a href = {i.link}>
+        <a href = {i.link} target='_blank'>
           <img className = "snsImg" src = {i.file} alt = {i.text}>
           </img>
         </a>
