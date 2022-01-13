@@ -1,11 +1,14 @@
 import React from 'react';
+
 import styled from "styled-components";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import { NavLink } from "react-router-dom";
+import { IoGridOutline } from "react-icons/io5";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
@@ -13,11 +16,12 @@ const MainSection = styled.div`
   position: relative;
   width: 85vw; height: 100vh;    left: 250px;  right: 250px;
   text-align: center;
+  align-items: center;
 `;
 
 const swiperStyle = {
   position: "relative",
-  width: "1000px",  height: "700px"
+  width: "60%",  height: "700px"
 };
 
 const SlideImg = [
@@ -25,6 +29,13 @@ const SlideImg = [
   { title: "slide_2", path: "img/slide_2.png" },
   { title: "slide_3", path: "img/slide_3.png" }
 ];
+
+const TotalViewIcon = styled.div`
+  position: absolute;
+  width: 100%; height: 100px;
+  margin-top: 30px;
+  font-size: 70px;  text-decoration: none;
+`
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
@@ -42,6 +53,13 @@ function Main(){
             {SlideImg.map((index) => <SwiperSlide>
               <img src = { index.path } alt = { index.title }></img></SwiperSlide>)}
           </Swiper>
+          <hr/>
+          <TotalViewIcon>
+            <NavLink to = "./TotalView" exact style = { {color: "gray"} }>
+              <IoGridOutline/>
+            </NavLink>
+          </TotalViewIcon>
+          <p>click here to view more items</p>
         </MainSection>
     )
 }
