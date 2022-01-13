@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { IoMdHome, IoMdPerson, IoMdHeart, IoMdSettings } from "react-icons/io";
 
-import myProfile from "./profile.jpg";
+// import myProfile from "img/profile.jpg"
+// const myProfile = [
+//     { title: "my profile", path: "img/profile.jpg" },
+//   ];
 
 const Menu = styled.div`
     width: 170px;
@@ -30,13 +33,6 @@ const Container = styled.div`
     background-color:lightblue;
 `;
 
-// const ToggleBtn = styled.button`
-//     position: sticky;
-//     width: 30px; height: 100px;
-//     border: none;
-//     background-color: skyblue;
-// `
-
 // fuck
 function SideBar(){
     const menu = [
@@ -49,12 +45,12 @@ function SideBar(){
     return(
         <>
         <Container>
-        <Profile src={ myProfile }/>
+        <Profile src = "img/profile.jpg"/>
         <p>choco the Jailed</p>
         <Menu>
             {menu.map((menu, index) => {
                 return(
-                    <NavLink to = { menu.path } key = { index } 
+                    <NavLink to = { menu.path } key = { index }
                     exact style = { {color: "gray", textDecoration: "none"} }
                     activeStyle = { {color: "white"} }>
                         <SideBarItem menu = { menu }/>
@@ -63,7 +59,6 @@ function SideBar(){
             })}
         </Menu>
         </Container>
-        {/* <ToggleBtn/> */}
         </> // head div
     );
 }
