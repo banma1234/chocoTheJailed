@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SideBar from "./layOut/SideBar";
-import SnsBar from "./layOut/snsBar";
+import SnsBar from "./layOut/SnsBar";
 import { Main, Profile, Like, Settings, NotFound } from "./pages";
 import './App.css';
 import Cards from './pages/Cards';

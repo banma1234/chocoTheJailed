@@ -1,7 +1,19 @@
 import styled from 'styled-components';
-import './snsBar.css';
 
-
+const Container = styled.div`
+display: inline-flex;
+position: absolute;
+left: 928px;
+bottom: -150px;
+border: 5px solid #94b1c9;
+border-radius: 15px;
+background-color: #94b1c9;
+`
+const Img = styled.img`
+width: 70px;
+height: 70px;
+padding: 15px;
+`
 
 function SnsBar() {
 
@@ -14,14 +26,14 @@ function SnsBar() {
   };
 
   return (
-    <div className="snsBar-container">
+    <Container>
       {sns.img.map((e) =>
         <a href={e.link} target='_blank'>
-          <img className="snsImg" src={e.file} alt={e.text}>
-          </img>
+          <Img src={e.file} alt={e.text}>
+          </Img>
         </a>
       )}
-    </div>
+    </Container>
   );
 }
 
