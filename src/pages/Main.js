@@ -30,7 +30,7 @@ const SlideImg = [
   { title: "slide_3", path: "img/slide_3.png" }
 ];
 
-const TotalViewIcon = styled.div`
+const CardsViewIcon = styled.div`
   position: absolute;
   width: 100%; height: 100px;
   margin-top: 30px;
@@ -54,11 +54,11 @@ function Main(){
               <img src = { index.path } alt = { index.title }></img></SwiperSlide>)}
           </Swiper>
           <hr/>
-          <TotalViewIcon>
-            <NavLink to = "./TotalView" exact style = { {color: "gray"} }>
+          <CardsViewIcon>
+            <NavLink to = "./Cards" exact style = { {color: "gray"} }>
               <IoGridOutline/>
             </NavLink>
-          </TotalViewIcon>
+          </CardsViewIcon>
           <p>click here to view more items</p>
         </MainSection>
     )

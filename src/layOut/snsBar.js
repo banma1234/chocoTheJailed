@@ -1,24 +1,39 @@
-import './snsBar.css';
+import styled from 'styled-components';
 
-export function SnsBar() {
+const Container = styled.div`
+display: inline-flex;
+position: absolute;
+left: 928px;
+bottom: -150px;
+border: 5px solid #94b1c9;
+border-radius: 15px;
+background-color: #94b1c9;
+`
+const Img = styled.img`
+width: 70px;
+height: 70px;
+padding: 15px;
+`
+
+function SnsBar() {
 
   const sns = {
     img: [
       { text: 'Instagram', file: 'img/instaImg.png', link: 'https://www.instagram.com/chocoham47/' },
       { text: 'Twitter', file: 'img/twitterImg.png', link: 'https://twitter.com/chocoham47' },
-      { text: 'Youtube', file: 'img/youtubeImg.png', link: 'https://www.twitch.tv/' }
+      { text: 'Youtube', file: 'img/youtubeImg.png', link: 'https://www.youtube.com/' }
     ]
   };
 
   return (
-    <div className="snsBar-container">
-      {sns.img.map((i) => 
-        <a href = {i.link}>
-          <img className = "snsImg" src = {i.file} alt = {i.text}>
-          </img>
+    <Container>
+      {sns.img.map((e) =>
+        <a href={e.link} target='_blank'>
+          <Img src={e.file} alt={e.text}>
+          </Img>
         </a>
       )}
-    </div>
+    </Container>
   );
 }
 
