@@ -34,45 +34,45 @@ const Container = styled.div`
 `;
 
 // fuck
-function SideBar(){
+function SideBar() {
     const menu = [
         { title: "Main", path: "/" },
-        { title: "Profile", path: "../pages/Profile"}, 
+        { title: "Profile", path: "../pages/Profile" },
         { title: "Like", path: "../pages/Like" },
         // { title : "message", path: "../pages/message" }, 
-        { title : "Settings", path: "../pages/Settings" }
+        { title: "Settings", path: "../pages/Settings" }
     ];
-    return(
+    return (
         <>
-        <Container>
-        <Profile src = "img/profile.jpg"/>
-        <p>choco the Jailed</p>
-        <Menu>
-            {menu.map((menu, index) => {
-                return(
-                    <NavLink to = { menu.path } key = { index }
-                    exact style = { {color: "gray", textDecoration: "none"} }
-                    activeStyle = { {color: "white"} }>
-                        <SideBarItem menu = { menu }/>
-                    </NavLink>
-                );
-            })}
-        </Menu>
-        </Container>
+            <Container>
+                <Profile src="img/profile.jpg" />
+                <p>choco the Jailed</p>
+                <Menu>
+                    {menu.map((menu, index) => {
+                        return (
+                            <NavLink to={menu.path} key={index}
+                                exact style={{ color: "gray", textDecoration: "none" }}
+                                activeStyle={{ color: "white" }}>
+                                <SideBarItem menu={menu} />
+                            </NavLink>
+                        );
+                    })}
+                </Menu>
+            </Container>
         </> // head div
     );
 }
 
-function SideBarItem({ menu }){
+function SideBarItem({ menu }) {
     var currentMenu = menu.title;
-    return(
+    return (
         <div>
             {
                 {
-                    Main : <p><IoMdHome/> { menu.title }</p>,
-                    Profile : <p><IoMdPerson/> { menu.title }</p>,
-                    Like : <p><IoMdHeart/> { menu.title }</p>,
-                    Settings : <p><IoMdSettings/> { menu.title }</p>
+                    Main: <p><IoMdHome /> {menu.title}</p>,
+                    Profile: <p><IoMdPerson /> {menu.title}</p>,
+                    Like: <p><IoMdHeart /> {menu.title}</p>,
+                    Settings: <p><IoMdSettings /> {menu.title}</p>
                 }[currentMenu]
             }
         </div>
