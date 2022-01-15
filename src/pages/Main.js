@@ -55,7 +55,7 @@ function Main(){
           </Swiper>
           <hr/>
           <CardsViewIcon>
-            <NavLink to = "./Cards" exact style = { {color: "gray"} }>
+            <NavLink to = "pages/Cards" exact style = { {color: "gray"} }>
               <IoGridOutline/>
             </NavLink>
           </CardsViewIcon>
