@@ -4,7 +4,7 @@ import SideBar from "./layOut/SideBar";
 import SnsBar from "./layOut/snsBar";
 import { Main, Profile, Like, Settings, Cards, NotFound } from "./pages";
 
-
+//fuck
 function App() {
   return (
     <div className="App">
