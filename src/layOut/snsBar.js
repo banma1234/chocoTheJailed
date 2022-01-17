@@ -28,8 +28,8 @@ function SnsBar() {
   return (
     <Container>
       {sns.img.map((e) =>
-        <a href={e.link} target='_blank'>
-          <Img src={e.file} alt={e.text}>
+        <a href= {e.link} target='_blank' rel="noreferrer">
+          <Img src= {e.file} alt= {e.text}>
           </Img>
         </a>
       )}
