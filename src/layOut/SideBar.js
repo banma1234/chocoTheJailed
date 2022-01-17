@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { IoMdHome, IoMdPerson, IoMdHeart, IoMdSettings } from "react-icons/io";
 
-// import myProfile from "img/profile.jpg"
+// import myProfile from '/img/profile.jpg'
 // const myProfile = [
 //     { title: "my profile", path: "img/profile.jpg" },
 //   ];
@@ -45,7 +45,9 @@ function SideBar() {
     return (
         <>
             <Container>
-                <Profile src="img/profile.jpg" />
+                {/* JSX에서 public 폴더의 절대경로 참조 시 아래의 코드 붙여야됨 */}
+                {/* 이렇게 하면 build했을때 html에서도 절대경로를 읽을 수 있다 */}
+                <Profile src= { process.env.PUBLIC_URL + '/img/profile.jpg' } />
                 <p>choco the Jailed</p>
                 <Menu>
                     {menu.map((menu, index) => {
