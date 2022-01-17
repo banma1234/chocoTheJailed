@@ -11,7 +11,7 @@ position: absolute;
 left: 300px;
 `
 const Title = styled.div`
-display: r;
+
 padding-top: 3px;
 width: 70px;
 height: 30px;
