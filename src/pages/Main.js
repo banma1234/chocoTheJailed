@@ -21,7 +21,7 @@ const MainSection = styled.div`
 
 const swiperStyle = {
   position: "relative",
-  width: "60%",  height: "700px"
+  width: "60%", height: "700px"
 };
 
 const SlideImg = [
@@ -39,29 +39,29 @@ const CardsViewIcon = styled.div`
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
-function Main(){
-    return(
-        <MainSection>
-          <h1>Hello CtJ World!</h1>
-          <Swiper style = {swiperStyle}
-            spacebetween = { 50 }
-            slidesPerView = { 1 }
-            navigation
-            loop
-            autoplay = { {delay : 3000} }
-            pagination = { {clickable : true} }>
-            {SlideImg.map((index) => <SwiperSlide>
-              <img src = { index.path } alt = { index.title }></img></SwiperSlide>)}
-          </Swiper>
-          <hr/>
-          <CardsViewIcon>
-            <NavLink to = "pages/Cards" exact style = { {color: "gray"} }>
-              <IoGridOutline/>
-            </NavLink>
-          </CardsViewIcon>
-          <p>click here to view more items</p>
-        </MainSection>
-    )
+function Main() {
+  return (
+    <MainSection>
+      <h1>Hello CtJ World!</h1>
+      <Swiper style={swiperStyle}
+        spacebetween={50}
+        slidesPerView={1}
+        navigation
+        loop
+        autoplay={{ delay: 3000 }}
+        pagination={{ clickable: true }}>
+        {SlideImg.map((index) => <SwiperSlide>
+          <img src={index.path} alt={index.title}></img></SwiperSlide>)}
+      </Swiper>
+      <hr />
+      <CardsViewIcon>
+        <NavLink to="pages/Cards" exact style={{ color: "gray" }}>
+          <IoGridOutline />
+        </NavLink>
+      </CardsViewIcon>
+      <p>click here to view more items</p>
+    </MainSection>
+  )
 }
 
 export default Main;

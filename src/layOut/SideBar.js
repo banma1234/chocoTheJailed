@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { IoMdHome, IoMdPerson, IoMdHeart, IoMdSettings } from "react-icons/io";
 
-// import myProfile from "img/profile.jpg"
+// import myProfile from '/img/profile.jpg'
 // const myProfile = [
 //     { title: "my profile", path: "img/profile.jpg" },
 //   ];
@@ -45,7 +45,9 @@ function SideBar() {
     return (
         <>
             <Container>
-                <Profile src="img/profile.jpg" />
+                {/* JSX���� public ������ ������ ���� �� �Ʒ��� �ڵ� �ٿ��ߵ� */}
+                {/* �̷��� �ϸ� build������ html������ �����θ� ���� �� �ִ� */}
+                <Profile src= { process.env.PUBLIC_URL + '/img/profile.jpg' } />
                 <p>choco the Jailed</p>
                 <Menu>
                     {menu.map((menu, index) => {
