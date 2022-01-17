@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 
-
 const Container = styled.div`
 border: 2px solid black;
 border-radius: 8px;
@@ -22,9 +21,6 @@ border: 1px solid black;
 width: 248px;
 height: 200px;
 object-fit: contain;
-
-
-
 `
 
 function Cards() {
@@ -41,14 +37,14 @@ function Cards() {
     return (
         <Container>
             {cards.card.map((e) =>
-            <>
-            <Title>
-                {e.title}
-            </Title>
-            <Img src={e.img} alt="gg"></Img>
-                <div>{e.expalin}</div>
-                
-            </>
+                <>
+                    <Title>
+                        {e.title}
+                    </Title>
+                    <Img src={e.img} alt="gg"></Img>
+                    <div>{e.expalin}</div>
+
+                </>
             )}
         </Container>
     )
