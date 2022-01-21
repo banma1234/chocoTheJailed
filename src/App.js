@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SideBar from "./layOut/SideBar";
-import SnsBar from "./layOut/SnsBar";
+import { NavBar, SnsBar} from "./layOut";
 import { Main, Profile, Like, Settings, Cards, Detail, NotFound} from "./pages";
 
 //yeh
@@ -9,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <SideBar></SideBar>
+        <NavBar></NavBar>
         <Routes>
           <Route path = "/" element = { <Main/> }></Route>
           <Route path = "/pages/Profile" element = { <Profile/> }></Route>
