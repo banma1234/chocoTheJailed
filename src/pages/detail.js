@@ -14,7 +14,7 @@ height: 600px;
 float:left;
 `
 const Title = styled.h2`
-`
+` 
 
 function Detail() {
   return (
