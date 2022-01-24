@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Choco the Jailed Project / master branch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+'master' is default branch of project 'Choco the Jailed'
 
-## Available Scripts
+## D-day of project
 
-In the project directory, you can run:
+you must build the project until our end of vacation
 
 ### `npm start`
 
