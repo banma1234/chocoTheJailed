@@ -20,11 +20,12 @@ const NavMenu = styled.div`
         padding: 5px;
     }
 
-    .Container {
-        display: flex;
+    .UserName {
+        display: none;
+        font-size: 16px;
     }
 
-    .Profile {
+    .Container {
         display: flex;
     }
 
@@ -38,23 +39,39 @@ const NavMenu = styled.div`
         .Container {
             display: ${(props) => (props.clicked ? "flex" : "none")};
             flex-direction: column;
-            width: 100%;
+            align-items: center;
+            justify-content: center;
+            left: 0px;  height: 500px;   width: 250px;
             background-color:lightblue;
-            font-size: 25px;
         }
 
-        .Profile {
+        .UserName {
             display: ${(props) => (props.clicked ? "flex" : "none")};
             flex-direction: column;
-            width: 150px;
-            height: 150px;
-            border-radius: 100%;
         }
+    }
+`;
+
+const Profile = styled.img`
+    display: none;
+    width: 150px;   height: 150px;
+    border-radius: 100%;
+
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+
+        display: ${(props) => (props.clicked ? "flex" : "none")};
+        width: 150px;   height: 150px;
+        border-radius: 100%;
     }
 `;
 
 // fuck
 function NavBar() {
+
+    const profileName = {title: "profile name", article: "choco the jailed"};
+    const profileImg = {title: "profile img", path: "img/profile.jpg"};
+
     const menu = [
         { title: "Main", path: "/" },
         { title: "Profile", path: "../pages/Profile" },
@@ -72,9 +89,12 @@ function NavBar() {
                     <FontAwesomeIcon icon = { !clicked ? faBars : faTimes }/>
                 </div>
                 <div className = "Container">
-                    <div className = "Profile"
-                    src= { process.env.PUBLIC_URL + '/img/profile.jpg' } />
-                    <p>choco the Jailed</p>
+                    <Profile src = { profileImg.path }
+                    clicked = { clicked } setClicked = { setClicked }/>
+                    {/* src= { process.env.PUBLIC_URL + '/img/profile.jpg' } /> */}
+                    <div className = "UserName">
+                        { profileName.article }
+                    </div>
                     {menu.map((menu, index) => {
                         return (
                             <NavLink to={menu.path} key={index}
