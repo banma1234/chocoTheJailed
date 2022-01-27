@@ -15,3 +15,7 @@ app.get('/', function(req, res){
 app.get('*', function(req, res){    // 리액트 Router 사용시 필요한 코드
     res.sendFile(path.join(__dirname, 'build/index.html'));
 });
+
+// app.use(express.json());
+// var cors = require('cors');
+// app.use(cors());
