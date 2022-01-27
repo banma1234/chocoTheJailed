@@ -1,8 +1,11 @@
 const express = require('express');
-const path = require('path');
+const path = require('body-parser');
+const cors = require('cors');
 const app = express();
 
-app.listen(8080, () => {
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
     console.log('server has been launched');
 })
 
@@ -12,7 +15,7 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, 'build/index.html'));
 });
 
-app.get('*', function(req, res){    // 리액트 Router 사용시 필요한 코드
+app.get('*', function(req, res){
     res.sendFile(path.join(__dirname, 'build/index.html'));
 });
 
