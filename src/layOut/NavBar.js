@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { IoMdHome, IoMdPerson, IoMdHeart, IoMdSettings } from "react-icons/io";
+// import { IoMdHome, IoMdPerson, IoMdHeart, IoMdSettings } from "react-icons/io";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+// import LogIn from "./Mordal/Component/LogIn";
+import Modal from "./Modal/Modal";
 
 const NavMenu = styled.div`
     max-width: 100%;
@@ -76,11 +79,12 @@ function NavBar() {
         { title: "Main", path: "/" },
         { title: "Profile", path: "../pages/Profile" },
         { title: "Like", path: "../pages/Like" },
-        // { title : "message", path: "../pages/message" }, 
         { title: "Settings", path: "../pages/Settings" }
+        // { title: "Register", path: "../pages/Login" }
     ];
 
     const [ clicked, setClicked ] = useState(false);
+    const [ modalClick, setModalClick ] = useState(false);
     return (
         <>
             <NavMenu clicked = { clicked } setClicked = { setClicked }>
@@ -97,18 +101,27 @@ function NavBar() {
                     </div>
                     {menu.map((menu, index) => {
                         return (
-                            <NavLink to={menu.path} key={index}
-                                exact style={{ color: "gray", textDecoration: "none" }}
-                                activeStyle={{ color: "white" }}>
+                            <>
+                            <NavLink to = {menu.path} key={index}
+                            exact style={{ color: "gray", textDecoration: "none" }}
+                            activeStyle={{ color: "white" }}>
                                 <SideBarItem menu={menu} />
                             </NavLink>
+                            </>
                         );
                     })}
+                    <div>
+                        <p onClick = { () => {setModalClick(!modalClick)} }>
+                            { modalClick && <Modal state = { modalClick }/> }Register
+                        </p>
+                    </div>
                 </div>
             </NavMenu>
         </> // head div
     );
 }
+
+// { modalClick && <LogIn/> }
 
 function SideBarItem({ menu }) {
     var currentMenu = menu.title;
@@ -116,10 +129,10 @@ function SideBarItem({ menu }) {
         <div>
             {
                 {
-                    Main: <p><IoMdHome /> {menu.title}</p>,
-                    Profile: <p><IoMdPerson /> {menu.title}</p>,
-                    Like: <p><IoMdHeart /> {menu.title}</p>,
-                    Settings: <p><IoMdSettings /> {menu.title}</p>
+                    Main: <p>&nbsp; {menu.title} &nbsp;</p>,
+                    Profile: <p>&nbsp; {menu.title} &nbsp;</p>,
+                    Like: <p>&nbsp; {menu.title} &nbsp;</p>,
+                    Settings: <p>&nbsp; {menu.title} &nbsp;&nbsp;</p>,
                 }[currentMenu]
             }
         </div>

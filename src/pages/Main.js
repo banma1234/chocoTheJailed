@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from "styled-components";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import { NavLink } from "react-router-dom";
