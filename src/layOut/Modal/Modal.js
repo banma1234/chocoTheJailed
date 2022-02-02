@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import ModalPortal from "./Portal/ModalPortal";
@@ -9,7 +9,8 @@ const Window = styled.div`
     position: relative;
     overflow: scroll;
     background: white;
-    border-radius: 10%;
+    border-radius: 6%;
+    z-index: 1000;
 `;
 
 const Overlay = styled.div`
@@ -25,12 +26,31 @@ const Overlay = styled.div`
     background: rgba(0, 0, 0, 0.55);
 `;
 
-function Modal({ state }){
+// function handleScroll({ modalOpen }){
+//     if({ modalOpen }){
+//         document.body.style.overflow = "hidden"
+//     }else{
+//         document.body.style.overflow = "unset"
+//     }
+// }
+
+function Modal({ modalClick }){
+    const [modalOpen, setModalOpen] = useState(false)
+    const modalHandler = () => {
+      setModalOpen(current => !current)
+    }
+
+    useEffect( () => {
+        console.log(modalOpen);
+    }, [modalOpen])
+
     return(
         <ModalPortal>
             <Overlay>
                 <Window>
-                    Mfker Im Ballin'
+                    <button onClick = {modalHandler}>change 1</button>
+                    <button onClick = { () => setModalOpen(!modalOpen)}>change 2</button>
+                    { modalOpen? "hell yeh i made it!": null }
                 </Window>
             </Overlay>
         </ModalPortal>

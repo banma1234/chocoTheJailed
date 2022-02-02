@@ -89,7 +89,6 @@ function NavBar() {
         <>
             <NavMenu clicked = { clicked } setClicked = { setClicked }>
                 <div className = "Hamberger" onClick = { () => {setClicked(!clicked)} }>
-                    {/* you can switch icons by event more easily */}
                     <FontAwesomeIcon icon = { !clicked ? faBars : faTimes }/>
                 </div>
                 <div className = "Container">
