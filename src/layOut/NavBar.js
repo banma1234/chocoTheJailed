@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-// import LogIn from "./Mordal/Component/LogIn";
 import Modal from "./Modal/Modal";
+import { LogIn } from "./Modal/Component";
 
 const NavMenu = styled.div`
     max-width: 100%;
@@ -85,6 +85,9 @@ function NavBar() {
 
     const [ clicked, setClicked ] = useState(false);
     const [ modalClick, setModalClick ] = useState(false);
+
+    const modalOpen = () => { setModalClick(true); }
+    const modalClose = () => { setModalClick(false); }
     return (
         <>
             <NavMenu clicked = { clicked } setClicked = { setClicked }>
@@ -110,9 +113,12 @@ function NavBar() {
                         );
                     })}
                     <div>
-                        <p onClick = { () => {setModalClick(!modalClick)} }>
-                            { modalClick && <Modal state = { modalClick }/> }Register
-                        </p>
+                        <p onClick = { modalOpen }>Register</p>
+                        <div>
+                            {modalClick && <Modal component = {<LogIn/>}
+                            closePortal = { modalClose }/>}
+                            <div id = "root-modal"></div>
+                        </div>
                     </div>
                 </div>
             </NavMenu>
