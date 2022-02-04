@@ -14,13 +14,14 @@ const NavMenu = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;   font-size: 17px;
+    color: white;   font-size: 18px;
     background-color: lightblue;
 
     .Hamberger {
         display: none;
         font-size: 40px;    color: white;
         padding: 5px;
+        width: 1000px;
     }
 
     .UserName {
@@ -40,16 +41,16 @@ const NavMenu = styled.div`
         }
 
         .Container {
-            display: ${(props) => (props.clicked ? "flex" : "none")};
+            display: ${(props) => (props.menuClicked ? "flex" : "none")};
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            left: 0px;  height: 500px;   width: 250px;
-            background-color:lightblue;
+            left: 0px;  height: 500px;   width: 100%;
+            background-color: skyblue;
         }
 
         .UserName {
-            display: ${(props) => (props.clicked ? "flex" : "none")};
+            display: ${(props) => (props.menuClicked ? "flex" : "none")};
             flex-direction: column;
         }
     }
@@ -63,7 +64,7 @@ const Profile = styled.img`
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
 
-        display: ${(props) => (props.clicked ? "flex" : "none")};
+        display: ${(props) => (props.menuClicked ? "flex" : "none")};
         width: 150px;   height: 150px;
         border-radius: 100%;
     }
@@ -83,20 +84,20 @@ function NavBar() {
         // { title: "Register", path: "../pages/Login" }
     ];
 
-    const [ clicked, setClicked ] = useState(false);
+    const [ menuClicked, setMenuClicked ] = useState(false);
     const [ modalClick, setModalClick ] = useState(false);
 
     const modalOpen = () => { setModalClick(true); }
     const modalClose = () => { setModalClick(false); }
     return (
         <>
-            <NavMenu clicked = { clicked } setClicked = { setClicked }>
-                <div className = "Hamberger" onClick = { () => {setClicked(!clicked)} }>
-                    <FontAwesomeIcon icon = { !clicked ? faBars : faTimes }/>
+            <NavMenu menuClicked = { menuClicked } setMenuClicked = { setMenuClicked }>
+                <div className = "Hamberger" onClick = { () => {setMenuClicked(!menuClicked)} }>
+                    <FontAwesomeIcon icon = { !menuClicked ? faBars : faTimes }/>
                 </div>
                 <div className = "Container">
                     <Profile src = { profileImg.path }
-                    clicked = { clicked } setClicked = { setClicked }/>
+                    menuClicked = { menuClicked } setMenuClicked = { setMenuClicked }/>
                     {/* src= { process.env.PUBLIC_URL + '/img/profile.jpg' } /> */}
                     <div className = "UserName">
                         { profileName.article }
@@ -126,8 +127,6 @@ function NavBar() {
     );
 }
 
-// { modalClick && <LogIn/> }
-
 function SideBarItem({ menu }) {
     var currentMenu = menu.title;
     return (
@@ -143,5 +142,7 @@ function SideBarItem({ menu }) {
         </div>
     )
 }
+
+
 
 export default NavBar;
