@@ -9,8 +9,10 @@ const Section = styled.div`
 
 function Detail(){
     return(
+      <>
         <Section>Detail</Section>
-        )
+      </>
+    );
 }
 
 export default Detail;
