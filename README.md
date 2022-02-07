@@ -1,6 +1,7 @@
 # library installed by npm
 
 styled-components
+
 react-router-dom
 fontawesome icons
 swiper
