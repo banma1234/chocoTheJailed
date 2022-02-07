@@ -10,7 +10,6 @@ const Container = styled.div`
   border: 5px solid #94b1c9;
   border-radius: 15px;
   background-color: #94b1c9;
-
 `
 const Img = styled.img`
   width: 70px;

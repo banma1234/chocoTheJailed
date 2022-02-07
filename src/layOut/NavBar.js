@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-// import { IoMdHome, IoMdPerson, IoMdHeart, IoMdSettings } from "react-icons/io";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "./Modal/Modal";
-import { LogIn } from "./Modal/Component";
+import { LogIn, Register } from "./Modal/Component";
 
 const NavMenu = styled.div`
     max-width: 100%;
@@ -21,7 +20,8 @@ const NavMenu = styled.div`
         display: none;
         font-size: 40px;    color: white;
         padding: 5px;
-        width: 1000px;
+        width: 40px;
+        cursor: pointer;
     }
 
     .UserName {
@@ -33,6 +33,10 @@ const NavMenu = styled.div`
         display: flex;
     }
 
+    .OpenLogIn{
+        cursor: pointer;
+    }
+
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
 
@@ -41,7 +45,7 @@ const NavMenu = styled.div`
         }
 
         .Container {
-            display: ${(props) => (props.menuClicked ? "flex" : "none")};
+            display: ${(props) => (props.menuClick ? "flex" : "none")};
             flex-direction: column;
             align-items: center;
             justify-content: center;
@@ -50,7 +54,7 @@ const NavMenu = styled.div`
         }
 
         .UserName {
-            display: ${(props) => (props.menuClicked ? "flex" : "none")};
+            display: ${(props) => (props.menuClick ? "flex" : "none")};
             flex-direction: column;
         }
     }
@@ -64,9 +68,10 @@ const Profile = styled.img`
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
 
-        display: ${(props) => (props.menuClicked ? "flex" : "none")};
+        display: ${(props) => (props.menuClick ? "flex" : "none")};
         width: 150px;   height: 150px;
         border-radius: 100%;
+        cursor: pointer;
     }
 `;
 
@@ -84,21 +89,20 @@ function NavBar() {
         // { title: "Register", path: "../pages/Login" }
     ];
 
-    const [ menuClicked, setMenuClicked ] = useState(false);
+    const [ menuClick, setMenuClick ] = useState(false);
     const [ modalClick, setModalClick ] = useState(false);
 
     const modalOpen = () => { setModalClick(true); }
     const modalClose = () => { setModalClick(false); }
     return (
         <>
-            <NavMenu menuClicked = { menuClicked } setMenuClicked = { setMenuClicked }>
-                <div className = "Hamberger" onClick = { () => {setMenuClicked(!menuClicked)} }>
-                    <FontAwesomeIcon icon = { !menuClicked ? faBars : faTimes }/>
+            <NavMenu menuClick = { menuClick } setMenuClick = { setMenuClick }>
+                <div className = "Hamberger" onClick = { () => {setMenuClick(!menuClick)} }>
+                    <FontAwesomeIcon icon = { !menuClick ? faBars : faTimes }/>
                 </div>
                 <div className = "Container">
                     <Profile src = { profileImg.path }
-                    menuClicked = { menuClicked } setMenuClicked = { setMenuClicked }/>
-                    {/* src= { process.env.PUBLIC_URL + '/img/profile.jpg' } /> */}
+                    menuClick = { menuClick } setMenuClick = { setMenuClick }/>
                     <div className = "UserName">
                         { profileName.article }
                     </div>
@@ -113,7 +117,7 @@ function NavBar() {
                             </>
                         );
                     })}
-                    <div>
+                    <div className = "OpenLogIn">
                         <p onClick = { modalOpen }>Register</p>
                         <div>
                             {modalClick && <Modal component = {<LogIn/>}
@@ -142,7 +146,5 @@ function SideBarItem({ menu }) {
         </div>
     )
 }
-
-
 
 export default NavBar;
