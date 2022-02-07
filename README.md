@@ -1,4 +1,4 @@
-# library for react
+# Library for react
 styled-components
 
 react-router-dom
