@@ -1,11 +1,11 @@
 # Library for react
-styled-components
+ styled-components
 
-react-router-dom
+ react-router-dom
 
-fontawesome icons
+ fontawesome icons
 
-react-icons
+ react-icons
 
 swiper(replace required)
 
