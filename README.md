@@ -5,6 +5,8 @@ react-router-dom
 
 fontawesome icons
 
+react-icons
+
 swiper
 
 
