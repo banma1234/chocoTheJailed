@@ -16,19 +16,12 @@ float:left;
 const Title = styled.h2`
 `
 
-function Detail() {
-  return (
-    <>
-      <Container>
-        <Title>Title of img</Title>
-        <Img src='../img/slide_2.png'></Img>
-        <PriceCoin></PriceCoin>
-        
-      </Container> 
-      <Comments></Comments>
-    </>
-
-  )
+function Detail(){
+    return(
+      <>
+        <Section>Detail</Section>
+      </>
+    );
 }
 
 export default Detail;

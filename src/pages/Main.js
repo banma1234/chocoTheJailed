@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from "styled-components";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import { NavLink } from "react-router-dom";
@@ -14,14 +13,22 @@ SwiperCore.use([Navigation, Pagination, Autoplay])
 
 const MainSection = styled.div`
   position: relative;
-  width: 85vw; height: 100vh;    left: 250px;  right: 250px;
+  width: 85vw; height: 100vh;    left: 100px;  right: 250px;
   text-align: center;
   align-items: center;
 `;
 
+const CardsViewIcon = styled.div`
+  position: absolute;
+  width: 100%; height: 100px;
+  margin-top: 30px;
+  font-size: 70px;  text-decoration: none;
+`;
+
 const swiperStyle = {
   position: "relative",
-  width: "60%", height: "700px"
+  width: "60%", height: "700px",
+  zIndex: -1000
 };
 
 const SlideImg = [
@@ -29,13 +36,6 @@ const SlideImg = [
   { title: "slide_2", path: "img/slide_2.png" },
   { title: "slide_3", path: "img/slide_3.png" }
 ];
-
-const CardsViewIcon = styled.div`
-  position: absolute;
-  width: 100%; height: 100px;
-  margin-top: 30px;
-  font-size: 70px;  text-decoration: none;
-`
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
