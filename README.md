@@ -1,11 +1,14 @@
-# Choco the Jailed Project / master branch
+# library installed by npm
 
-'master' is default branch of project 'Choco the Jailed'
+styled-components
+react-router-dom
+fontawesome icons
+swiper
+
 
 ## D-day of project
 
 you must build the project until our end of vacation
-
 
 
 ## Project members
