@@ -21,7 +21,7 @@ you must build the project until our end of vacation
 
 ### `banma1234(Choco the Jailed)`
 
-He's King of coding who own this project
+Master of coding who own this project
 
 ### `hskang200(hagota)`
 
