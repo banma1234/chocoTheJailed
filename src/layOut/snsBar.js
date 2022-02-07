@@ -37,6 +37,7 @@ function SnsBar() {
         </a>
       )}
     </Container>
+    
   );
 }
 
