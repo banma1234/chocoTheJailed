@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FaEthereum, FaHeart, FaCommentDots, FaRegEye, FaShare } from "react-icons/fa";
 
 function PriceCoin(params) {
     const Section = styled.div`
@@ -7,6 +8,7 @@ function PriceCoin(params) {
     height: 600px;
     float:left;
     margin-left: 45px;
+    text-align: center;
     `
     const Price = styled.div`
     `
@@ -14,9 +16,12 @@ function PriceCoin(params) {
     `
     return (
         <Section>
-            <Price>price : {"params price"} ({"params Dollar"})</Price>
+            <Price> price : {"params price"} <FaEthereum /> ({"params Dollar"})
+            </Price>
             <div>explain this img</div>
-            <Share>"heart", "comment", "views", "share"</Share>
+            <Share>
+                <FaHeart /><FaCommentDots /><FaRegEye /><FaShare />
+            </Share>
         </Section>
     )
 

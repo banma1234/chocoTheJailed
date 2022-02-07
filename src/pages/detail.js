@@ -14,16 +14,20 @@ height: 600px;
 float:left;
 `
 const Title = styled.h2`
-` 
+`
 
 function Detail() {
   return (
-    <Container>
-      <Title>Title of img</Title>
-      <Img src='../img/slide_2.png'></Img>
-      <PriceCoin></PriceCoin>
+    <>
+      <Container>
+        <Title>Title of img</Title>
+        <Img src='../img/slide_2.png'></Img>
+        <PriceCoin></PriceCoin>
+        
+      </Container> 
       <Comments></Comments>
-    </Container> 
+    </>
+
   )
 }
 
