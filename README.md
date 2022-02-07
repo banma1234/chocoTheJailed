@@ -7,7 +7,7 @@ fontawesome icons
 
 react-icons
 
-swiper
+swiper(replace required)
 
 
 
