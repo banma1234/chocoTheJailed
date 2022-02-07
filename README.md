@@ -1,9 +1,10 @@
-# library installed by npm
-
+# library for react
 styled-components
 
 react-router-dom
+
 fontawesome icons
+
 swiper
 
 
