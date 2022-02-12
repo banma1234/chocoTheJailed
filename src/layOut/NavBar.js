@@ -15,7 +15,6 @@ const NavMenu = styled.div`
     align-items: center;
     color: white;   font-size: 18px;
     background-color: lightblue;
-
     .Hamberger {
         display: none;
         font-size: 40px;    color: white;
@@ -23,27 +22,29 @@ const NavMenu = styled.div`
         width: 40px;
         cursor: pointer;
     }
-
     .UserName {
         display: none;
         font-size: 16px;
     }
-
     .Container {
         display: flex;
     }
+<<<<<<< HEAD
+    .OpenLogIn{
+        cursor: pointer;
+    }
+=======
 
     .OpenLogIn{
         cursor: pointer;
     }
 
+>>>>>>> 2bb1f55bbe79bba77eba3944d1776615348b880e
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
-
         .Hamberger {
             display: block;
         }
-
         .Container {
             display: ${(props) => (props.menuClick ? "flex" : "none")};
             flex-direction: column;
@@ -52,7 +53,6 @@ const NavMenu = styled.div`
             left: 0px;  height: 500px;   width: 100%;
             background-color: skyblue;
         }
-
         .UserName {
             display: ${(props) => (props.menuClick ? "flex" : "none")};
             flex-direction: column;
@@ -64,10 +64,12 @@ const Profile = styled.img`
     display: none;
     width: 150px;   height: 150px;
     border-radius: 100%;
-
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2bb1f55bbe79bba77eba3944d1776615348b880e
         display: ${(props) => (props.menuClick ? "flex" : "none")};
         width: 150px;   height: 150px;
         border-radius: 100%;
@@ -86,7 +88,6 @@ function NavBar() {
         { title: "Profile", path: "../pages/Profile" },
         { title: "Like", path: "../pages/Like" },
         { title: "Settings", path: "../pages/Settings" }
-        // { title: "Register", path: "../pages/Login" }
     ];
 
     const [ menuClick, setMenuClick ] = useState(false);

@@ -9,6 +9,40 @@ const MoveBtn = styled.button`
     cursor: pointer;
 `;
 
+const Input = styled.input`
+    width: 250px;   height: 35px;
+    font-size: 16px;
+    border-style: solid;    border-width: 1px;
+    border-color: lightgray;
+    outline: none;
+`;
+
+const Frame = styled.div`
+    position: relative;
+    width: 270px;   height: 240px;
+    text-align: left;
+    left: 170px;    top: 10px;
+
+    .forgot{
+        text-align: right;
+        font-size: 12.5px;
+        padding-right: 14px;
+        cursor: pointer;
+    }
+
+    .Btn{
+        width: 260px;   height: 35px;
+        border: none;
+        background-color: lightblue;
+        font-size: 17px;
+        cursor: pointer;
+    }
+`;
+
+const Banner = styled.div`
+    width: 100%;    height: 80px;
+`;
+
 function LogIn(){
     const [regiClick, setRegiClick] = useState(false);
 
@@ -17,8 +51,13 @@ function LogIn(){
     if(regiClick){
         return(
           <>
-            <h1>Register</h1>
-            <p>i'll take ur personal info</p>
+            <Banner>
+                <img src = "img/banner.jpg" alt = ""/>
+            </Banner>
+            <Frame>
+                <h1>Register</h1>
+                <p>i'll take ur personal info</p>
+            </Frame>
             <hr/>
             <p>Arleady have an account?</p>
             <MoveBtn onClick = { openLogIn }>Log in</MoveBtn>
@@ -27,8 +66,16 @@ function LogIn(){
     }else{
         return (
             <>
-            <h1>Log in</h1>
-            <p>ID: <input></input></p>
+            <Banner>
+                <img src = "img/banner.jpg" alt = ""/>
+            </Banner>
+            <Frame>
+                <h1>Log in</h1>
+                <Input placeholder = "e-mail"></Input>
+                <Input type = "password" placeholder = "password"></Input>
+                <p className = "forgot">forgot password</p>
+                <button className = "Btn">Log In</button>
+            </Frame>
             <hr/>
             <p>If you don't have any account for dive in</p>
             <MoveBtn onClick = { openRegi }>Register</MoveBtn>
