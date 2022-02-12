@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Window = styled.div`
     height: 600px;  width: 600px;
@@ -25,17 +23,15 @@ const Overlay = styled.div`
     z-index: 999;
 `;
 
-const Close = styled.div`
-    position: relative;
-    font-size: 30px;
-    color: gray;
-    text-align: right;
-    right: 25px;    top: 5px;
-`;
-
 function Modal({ component, closePortal }){
     const [modalOpen, setModalOpen] = useState(false)
     const ref = useRef(null);
+
+    const exit = (e) => {
+        if(e.target === e.currentTarget){
+            closePortal()
+        }
+    }
 
     useEffect(() => {
         setModalOpen(true);
@@ -52,12 +48,8 @@ function Modal({ component, closePortal }){
 
     if(ref.current && modalOpen){
         return createPortal(
-            <Overlay>
+            <Overlay onClick = { exit }>
                 <Window>
-                    <Close>
-                        <FontAwesomeIcon icon = { faTimes }
-                        onClick = { closePortal }/>
-                    </Close>
                     <p>{ component }</p>
                 </Window>
             </Overlay>,
