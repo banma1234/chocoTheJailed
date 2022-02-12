@@ -3,14 +3,13 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: inline-flex;
   position: absolute;
-  left: 920px;
-  bottom: -150px;
+  left: 770px;
+  bottom: -200px;
   text-align: center;
   align-items: center;
   border: 5px solid #94b1c9;
   border-radius: 15px;
   background-color: #94b1c9;
-
 `
 const Img = styled.img`
   width: 70px;
@@ -38,6 +37,7 @@ function SnsBar() {
         </a>
       )}
     </Container>
+    
   );
 }
 

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "./Modal/Modal";
-import { LogIn } from "./Modal/Component";
+import { LogIn, Register } from "./Modal/Component";
 
 const NavMenu = styled.div`
     max-width: 100%;
@@ -29,9 +29,17 @@ const NavMenu = styled.div`
     .Container {
         display: flex;
     }
+<<<<<<< HEAD
     .OpenLogIn{
         cursor: pointer;
     }
+=======
+
+    .OpenLogIn{
+        cursor: pointer;
+    }
+
+>>>>>>> 2bb1f55bbe79bba77eba3944d1776615348b880e
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
         .Hamberger {
@@ -58,6 +66,10 @@ const Profile = styled.img`
     border-radius: 100%;
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bb1f55bbe79bba77eba3944d1776615348b880e
         display: ${(props) => (props.menuClick ? "flex" : "none")};
         width: 150px;   height: 150px;
         border-radius: 100%;
@@ -76,7 +88,6 @@ function NavBar() {
         { title: "Profile", path: "../pages/Profile" },
         { title: "Like", path: "../pages/Like" },
         { title: "Settings", path: "../pages/Settings" }
-        // { title: "Register", path: "../pages/Login" }
     ];
 
     const [ menuClick, setMenuClick ] = useState(false);

@@ -1,6 +1,15 @@
-# Choco the Jailed Project / master branch
+# Library for react
+styled-components
 
-'master' is default branch of project 'Choco the Jailed'
+react-router-dom
+
+fontawesome icons
+
+react-icons
+
+swiper(replace required)
+
+
 
 ## D-day of project
 
@@ -12,7 +21,7 @@ you must build the project until our end of vacation
 
 ### `banma1234(Choco the Jailed)`
 
-He's King of coding who own this project
+Master of coding who own this project
 
 ### `hskang200(hagota)`
 
