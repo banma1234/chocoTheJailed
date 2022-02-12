@@ -86,7 +86,6 @@ function NavBar() {
         { title: "Profile", path: "../pages/Profile" },
         { title: "Like", path: "../pages/Like" },
         { title: "Settings", path: "../pages/Settings" }
-        // { title: "Register", path: "../pages/Login" }
     ];
 
     const [ menuClick, setMenuClick ] = useState(false);
