@@ -1,39 +1,22 @@
-const path = require('path');
-const express = require('express');
-const server = express();
-// const mongoClient = require('mongodb').MongoClient;
+const dotenv = require("dotenv");
+dotenv.config({ path: ".env" });
 
-const users = [
-    {
-        id: "hagota",
-        name: "KingNewyork",
-        email: "hagota200@gmail.com"
-    },
-    {
-        id: "banma1234",
-        name: "lilbumsu",
-        email: "banma1234@gmail.com"
-    }
-]
+const express = require("express");
+const app = express();
+const port = process.env.PORT;
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
-server.listen(8080, () => { // run code
-    console.log('server has been launched');
-})
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-server.use(express.static(path.join(__dirname, 'build')));
 
-server.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, 'build/index.html'));
-});
 
-server.get('*', function(req, res){
-    res.sendFile(path.join(__dirname, 'build/index.html'));
-});
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log(err));
 
-server.get("/api/user", function(req, res){
-    res.json(users);
-});
+app.get("/", (req, res) => res.send("Hello world!!!!"));
 
-// server.use(express.json());
-// var cors = require('cors');
-// server.use(cors());
+app.listen(port, () => console.log(`listening on port ${port}`));
