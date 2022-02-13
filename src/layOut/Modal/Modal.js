@@ -54,7 +54,7 @@ function Modal({ component, closePortal }){
         return createPortal(
             <Overlay onClick = { exit }>
                 <Window>
-                <Banner src = "img/banner.jpg"/>
+                <Banner src = "/img/banner.jpg"/>
                     <p>{ component }</p>
                 </Window>
             </Overlay>,
