@@ -58,6 +58,10 @@ const Profile = styled.img`
     border-radius: 100%;
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2bb1f55bbe79bba77eba3944d1776615348b880e
         display: ${(props) => (props.menuClick ? "flex" : "none")};
         width: 150px;   height: 150px;
         border-radius: 100%;
