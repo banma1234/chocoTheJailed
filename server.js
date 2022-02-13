@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+const path = require('path');
 dotenv.config({ path: ".env" });
 
 const express = require("express");
@@ -17,6 +18,14 @@ mongoose
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
-app.get("/", (req, res) => res.send("Hello world!!!!"));
+// app.get("/", (req, res) => res.send("Hello world!!!!"));
+
+app.get('/', function(req, res){
+  res.sendFile(path.join(__dirname, 'build/index.html'));
+});
+
+app.get('*', function(req, res){
+  res.sendFile(path.join(__dirname, 'build/index.html'));
+});
 
 app.listen(port, () => console.log(`listening on port ${port}`));
