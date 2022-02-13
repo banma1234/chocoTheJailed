@@ -39,10 +39,6 @@ const Frame = styled.div`
     }
 `;
 
-const Banner = styled.div`
-    width: 100%;    height: 80px;
-`;
-
 function LogIn(){
     const [regiClick, setRegiClick] = useState(false);
 
@@ -51,9 +47,6 @@ function LogIn(){
     if(regiClick){
         return(
           <>
-            <Banner>
-                <img src = "img/banner.jpg" alt = ""/>
-            </Banner>
             <Frame>
                 <h1>Register</h1>
                 <p>i'll take ur personal info</p>
@@ -66,9 +59,6 @@ function LogIn(){
     }else{
         return (
             <>
-            <Banner>
-                <img src = "img/banner.jpg" alt = ""/>
-            </Banner>
             <Frame>
                 <h1>Log in</h1>
                 <Input placeholder = "e-mail"></Input>

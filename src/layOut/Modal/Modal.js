@@ -23,6 +23,10 @@ const Overlay = styled.div`
     z-index: 999;
 `;
 
+const Banner = styled.img`
+    width: 350px;    height: 100px;
+`;
+
 function Modal({ component, closePortal }){
     const [modalOpen, setModalOpen] = useState(false)
     const ref = useRef(null);
@@ -50,6 +54,7 @@ function Modal({ component, closePortal }){
         return createPortal(
             <Overlay onClick = { exit }>
                 <Window>
+                <Banner src = "img/banner.jpg"/>
                     <p>{ component }</p>
                 </Window>
             </Overlay>,
