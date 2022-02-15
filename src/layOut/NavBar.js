@@ -32,7 +32,7 @@ const NavMenu = styled.div`
     .OpenLogIn{
         cursor: pointer;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         flex-wrap: wrap;
         .Hamberger {
             display: block;
@@ -56,7 +56,7 @@ const Profile = styled.img`
     display: none;
     width: 150px;   height: 150px;
     border-radius: 100%;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         flex-wrap: wrap;
         display: ${(props) => (props.menuClick ? "flex" : "none")};
         width: 150px;   height: 150px;
