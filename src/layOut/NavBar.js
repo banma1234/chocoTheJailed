@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "./Modal/Modal";
-import { LogIn, Register } from "./Modal/Component";
+import { LogIn } from "./Modal/Component";
 
 const NavMenu = styled.div`
     max-width: 100%;

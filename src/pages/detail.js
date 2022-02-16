@@ -6,20 +6,15 @@ const MainSection = styled.div`
   position: relative;
   width: 100%; height: 1400px;
   text-align: center; align-items: center;
-  background-color: gray; background-position: center;
+  background-position: center;
 
   .Container{
+    border-radius: 1%;
     position: absolute;
-    left: 50%;  transform: translateX(-50%);
-    width: 1200px; height: 90%;
+    left: 42%;  transform: translateX(-50%);
+    width: 900px; height: 90%;
     padding: 10px;
     background-color: lightgray;
-  }
-
-  .Info{
-    width: 270px; height: 878px;
-    float:left;
-    text-align: left; padding: 10px;
   }
 
   .Img{
@@ -29,8 +24,8 @@ const MainSection = styled.div`
   }
 
   .Comment{
-    width: 1190px; height: 300px;
-    border: 1px solid;
+    width: 900px; height: 340px;
+    // border: 1px solid;
     margin-top: 15px;
     float: left;
     text-align: left;
@@ -38,18 +33,12 @@ const MainSection = styled.div`
 
   // 2nd state
   @media screen and (max-width: 1361px) {
-    width: 1361px; height: 2000px;
+    width: 1361px;
     flex-wrap: wrap;
 
     .Container{
       position: absolute;
-      width: 1000px; height: 80%;  left: 573px;
-    }
-
-    .Info {
-      position: relative;
-      flex-direction: column;
-      width: 270px; height: 678px;
+      width: 700px;  left: 616px;
     }
 
     .Img {
@@ -58,23 +47,18 @@ const MainSection = styled.div`
     }
 
     .Comment{
-      width: 990px;
+      width: 700px;
     }
   }
 
   // 3rd state
   @media screen and (max-width: 800px){
     flex-wrap: wrap;
+    height: 1700px;
 
     .Container{
       position: absolute;
-      width: 700px; height: 80%;  left: 423px;
-    }
-
-    .Info {
-      position: relative;
-      flex-direction: column;
-      width: 628px; height: 300px;
+      width: 650px; height: 90%;  left: 423px;
     }
 
     .Img {
@@ -83,9 +67,60 @@ const MainSection = styled.div`
     }
 
     .Comment{
-      width: 647px;
+      position: absolute;
+      top: 990px;
+      width: 650px;
     }
   }
+`;
+
+const Info = styled.div`
+  // common state
+  left: 920px;  margin-top: -10px;
+  position: absolute;
+  width: 270px; height: 1260px;
+  float:left;
+  text-align: left; padding: 10px;
+  margin-left: 10px;
+  background-color: yellow;
+
+  // 2nd state
+  @media screen and (max-width: 1361px) {
+    left: 720px;
+    flex-direction: column;
+    width: 270px;
+  }
+
+  // 3rd state
+  @media screen and (max-width: 800px) {
+    left: 0px;  top: 680px;
+    flex-direction: column;
+    width: 628px; height: 300px;
+  }
+`;
+
+const CommentInput = styled.input`
+  position: relative;
+  outline: none;
+  font-size: 17px;  padding-left: 10px;
+  border: 0;
+  width: 82%; height: 35px;
+  margin-left: 20px;
+`;
+
+const Btn = styled.button`
+  width: 65px;  height: 35px;
+  border: 0;
+  background-color: skyblue;
+  cursor: pointer;
+  margin-left: 10px;
+`;
+
+const Output = styled.div`
+  width: 94%; height: 220px;
+  border: 0;
+  background-color: white;
+  margin-left: 20px;
 `;
 
 function Detail(){
@@ -94,12 +129,16 @@ function Detail(){
         <MainSection>
           <h1>Detail</h1>
           <div className = "Container">
-            <img className = "Img" src = "/img/slide_1.png" alt = ""/>
-            <div className = "Info">info</div>
+            <img className = "Img" src = "/img/profile.jpg" alt = ""/>
             <div className = "Comment">
-              <p>comment</p>
-              <input/>
+            <hr/>
+            <p>comment</p>
+              <Output></Output>
+              <hr/>
+              <CommentInput placeholder = "write your comment"></CommentInput>
+              <Btn>Submit</Btn>
             </div>
+            <Info>info</Info>
           </div>
         </MainSection>
       </>
