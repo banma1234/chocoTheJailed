@@ -1,21 +1,41 @@
 import styled from 'styled-components';
 
+const Section = styled.div`
+  position: relative;
+  width: 100%;
+  bottom: -150px;
+
+  .Line{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: gray;
+    font-size: 16px;
+    margin: 8px 0px;
+  }
+  .Line::before, .Line::after{
+    content: "";
+    flex-grow: 1;
+    margin: 0 16px;
+    background-color: gray;
+    font-size: 0;
+    height: 1px;      line-height: 0;
+  }
+`;
+
 const Container = styled.div`
   display: inline-flex;
-  position: absolute;
-  left: 770px;
-  bottom: -200px;
-  text-align: center;
+  position: relative;
+  width: 100%;
   align-items: center;
-  border: 5px solid #94b1c9;
-  border-radius: 15px;
-  background-color: #94b1c9;
-`
+  justify-content: center;
+`;
+
 const Img = styled.img`
   width: 70px;
   height: 70px;
   padding: 15px;
-`
+`;
 
 function SnsBar() {
 
@@ -28,15 +48,17 @@ function SnsBar() {
   };
 
   return (
-
-    <Container>
-      {sns.img.map((e) =>
-        <a href={e.link} target='_blank' rel="noreferrer">
-          <Img src={e.file} alt={e.text}>
-          </Img>
-        </a>
-      )}
-    </Container>
+    <Section>
+      <div className = "Line">Link to</div>
+      <Container>
+        {sns.img.map((e) =>
+          <a href={e.link} target='_blank' rel="noreferrer">
+            <Img src={e.file} alt={e.text}>
+            </Img>
+          </a>
+        )}
+      </Container>
+    </Section>
     
   );
 }

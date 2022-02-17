@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 import Modal from "./Modal/Modal";
-import { LogIn, Register } from "./Modal/Component";
+import { LogIn } from "./Modal/Component";
 
 const NavMenu = styled.div`
     max-width: 100%;
@@ -32,7 +32,7 @@ const NavMenu = styled.div`
     .OpenLogIn{
         cursor: pointer;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         flex-wrap: wrap;
         .Hamberger {
             display: block;
@@ -56,7 +56,7 @@ const Profile = styled.img`
     display: none;
     width: 150px;   height: 150px;
     border-radius: 100%;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         flex-wrap: wrap;
 <<<<<<< HEAD
 =======
