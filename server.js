@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(express.static(path.join(__dirname, '/build')))
 
 
 mongoose
@@ -21,11 +21,11 @@ mongoose
 // app.get("/", (req, res) => res.send("Hello world!!!!"));
 
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'build/index.html'));
+  res.sendFile(path.join(__dirname, 'ctj/build/index.html'));
 });
 
-app.get('*', function(req, res){
-  res.sendFile(path.join(__dirname, 'build/index.html'));
-});
+//app.get('*', function(req, res){
+//  res.sendFile(path.join(__dirname, 'build/index.html'));
+//});
 
 app.listen(port, () => console.log(`listening on port ${port}`));
