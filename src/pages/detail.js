@@ -123,6 +123,7 @@ const Output = styled.div`
   margin-left: 20px;
 `;
 
+// hello
 function Detail(){
     return(
       <>
