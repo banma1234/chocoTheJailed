@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍎공지사항
 
-## Getting Started
+프로젝트를 Next.js + typescript 형식으로 리팩토링 하기로 결정됬습니다. 당분간 푸쉬가 없더라도 슬퍼하지 말아주세요
 
-First, run the development server:
+<hr/>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Used fucntion
+Library & Frameworks
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+with
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+<hr/>
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## About
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+나만을 위한 나만에 의한 나만의 프로젝트. nft 포트폴리오 관리 사이트로 떡상할지도 모르니 라이센스 이용에 주의하자 ~~
 
-## Deploy on Vercel
+<hr/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project members
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### `banma1234(Choco the Jailed)`
+
+project O.W.N.E.R
+
+### `hskang200(hagota)`
+
+A Project member who ruled by Choco, descendants of js knowledge
