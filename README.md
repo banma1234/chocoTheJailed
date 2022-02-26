@@ -4,7 +4,7 @@
 
 <hr/>
 
-# Used fucntion
+## Used fucntion
 Library & Frameworks
 
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
@@ -23,7 +23,7 @@ with
 <hr/>
 
 
-# About
+## About
 
 나만을 위한 나만에 의한 나만의 프로젝트. nft 포트폴리오 관리 사이트로 떡상할지도 모르니 라이센스 이용에 주의하자 ~~
 
