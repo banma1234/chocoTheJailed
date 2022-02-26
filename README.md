@@ -14,6 +14,13 @@ with
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 
+<hr/>
+
+
+# 🍎공지사항
+
+프로젝트를 Next.js + typescript 형식으로 리팩토링 하기로 결정됬습니다. 당분간 푸쉬가 없더라도 슬퍼하지 말아주세요
+
 
 # About
 
