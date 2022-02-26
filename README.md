@@ -1,5 +1,5 @@
-# Frameworks & Library
-제발 추가한거 있으면 리드미에 써두자 패키지.json 보라고 우기지 말고
+# Used fucntion
+Library & Frameworks
 
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
