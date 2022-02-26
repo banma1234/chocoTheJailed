@@ -15,9 +15,9 @@ with
 
 
 
-## D-day of project
+# About
 
-you must build the project until our end of vacation
+나만을 위한 나만에 의한 나만의 프로젝트. nft 포트폴리오 관리 사이트로 떡상할지도 모르니 라이센스 이용에 주의하자 ~~
 
 
 
@@ -25,8 +25,8 @@ you must build the project until our end of vacation
 
 ### `banma1234(Choco the Jailed)`
 
-Master of coding who own this project
+project O.W.N.E.R
 
 ### `hskang200(hagota)`
 
-A Project member who ruled by Choco, the ancester of python knowledge
+A Project member who ruled by Choco, descendants of js knowledge
