@@ -1,3 +1,9 @@
+# 🍎공지사항
+
+프로젝트를 Next.js + typescript 형식으로 리팩토링 하기로 결정됬습니다. 당분간 푸쉬가 없더라도 슬퍼하지 말아주세요
+
+<hr/>
+
 # Used fucntion
 Library & Frameworks
 
@@ -17,16 +23,11 @@ with
 <hr/>
 
 
-# 🍎공지사항
-
-프로젝트를 Next.js + typescript 형식으로 리팩토링 하기로 결정됬습니다. 당분간 푸쉬가 없더라도 슬퍼하지 말아주세요
-
-
 # About
 
 나만을 위한 나만에 의한 나만의 프로젝트. nft 포트폴리오 관리 사이트로 떡상할지도 모르니 라이센스 이용에 주의하자 ~~
 
-
+<hr/>
 
 ## Project members
 
